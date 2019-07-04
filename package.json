@@ -39,7 +39,8 @@
     "isobject": "~2.0.0",
     "object-assign": "~4.0.1",
     "x-ray-crawler": "~2.0.1",
-    "x-ray-parse": "~1.0.1"
+    "x-ray-parse": "~1.0.1",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "concat-stream": "~1.5.1",
@@ -57,7 +58,10 @@
   "scripts": {
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly",
     "pretest": "standard",
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
